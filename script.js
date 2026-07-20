@@ -41,11 +41,11 @@ function calculatePattern() {
     // GAUGE
     // ==============================
 
-    // 7 stitches = ? cm
-    const stitchGauge = 7 / horizontalCm;
+    // 17 stitches = ? cm
+const stitchGauge = 17 / horizontalCm;
 
-    // 17 rows = ? cm
-    const rowGauge = 17 / verticalCm;
+// 7 rows = ? cm
+const rowGauge = 7 / verticalCm;
 
     // ==============================
     // FOUNDATION CHAIN
