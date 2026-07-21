@@ -14,6 +14,9 @@ function calculatePattern() {
 
     const chestWidth = Number(document.getElementById("chestWidth").value);
     const jacketLength = Number(document.getElementById("jacketLength").value);
+    const sleeveLength = Number(document.getElementById("sleeveLength").value);
+    const armhole = Number(document.getElementById("armhole").value);
+    const neckWidth = Number(document.getElementById("neckWidth").value);
 
     const horizontalCm = Number(document.getElementById("horizontalGauge").value);
     const verticalCm = Number(document.getElementById("verticalGauge").value);
@@ -23,15 +26,23 @@ function calculatePattern() {
     // ==============================
 
     if (
+
     isNaN(chestWidth) ||
     isNaN(jacketLength) ||
+    isNaN(sleeveLength) ||
+    isNaN(armhole) ||
+    isNaN(neckWidth) ||
     isNaN(horizontalCm) ||
     isNaN(verticalCm) ||
 
     chestWidth <= 0 ||
     jacketLength <= 0 ||
+    sleeveLength <= 0 ||
+    armhole <= 0 ||
+    neckWidth <= 0 ||
     horizontalCm <= 0 ||
     verticalCm <= 0
+
 ) {
     alert("Please complete all required fields.");
     return;
@@ -69,6 +80,33 @@ const rowGauge = 7 / verticalCm;
     totalRows = Math.ceil(totalRows / 2) * 2;
 
     // ==============================
+    // FRONT PANEL
+    // ==============================
+
+    // Foundation Chain
+    let frontFoundation =
+    ((chestWidth / 2) - 3) * stitchGauge;
+
+    frontFoundation = Math.ceil(frontFoundation);
+    frontFoundation = Math.ceil(frontFoundation / 4) * 4;
+    frontFoundation += 3;
+
+// Total Decreased Rows
+let frontDecreasedRows =
+    armhole * rowGauge;
+
+// Round UP to nearest odd number
+frontDecreasedRows = Math.ceil(frontDecreasedRows);
+
+if (frontDecreasedRows % 2 === 0) {
+    frontDecreasedRows++;
+}
+
+// Total Normal Rows
+let frontNormalRows =
+    totalRows - frontDecreasedRows;
+
+    // ==============================
     // DISPLAY RESULT
     // ==============================
 
@@ -78,4 +116,12 @@ const rowGauge = 7 / verticalCm;
     document.getElementById("backRows").textContent =
         totalRows + " rows";
 
+    document.getElementById("frontFoundationResult").textContent =
+    frontFoundation + " sts";
+
+    document.getElementById("frontNormalRowsResult").textContent =
+    frontNormalRows + " rows";
+
+    document.getElementById("frontDecreasedRowsResult").textContent =
+    frontDecreasedRows + " rows";
 }

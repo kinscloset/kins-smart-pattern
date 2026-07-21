@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Kin's Smart Pattern</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="moonlit.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- HERO -->
+
+        <!-- HERO -->
+
+<section class="hero">
+
+    <p class="eyebrow">
+        KIN'S SMART PATTERN
+    </p>
+
+    <h1>
+        Moonlit Pages
+    </h1>
+
+    <p class="hero-description">
+        Some stories are not written in daylight. They appear quietly,
+        somewhere between midnight thoughts and unfinished dreams.
+    </p>
+
+    <p class="hero-story">
+        Moonlit Pages is an ode to those quiet hours—when we write our
+        truest stories, even if no one else ever reads them.
+    </p>
+
+</section>
+
+        <!-- MEASUREMENT GUIDE -->
+
+        <section class="card">
+
+    <h2>Measurement Guide</h2>
+
+    <p class="section-description">
+        Use a cardigan or jacket that already fits the way you like.
+        Measure the garment instead of measuring your body.
+    </p>
+
+    <img
+        src="assets/measurement-guide.png"
+        alt="Measurement Guide"
+        class="guide-image">
+
+</section>
+
+        <!-- MEASUREMENTS -->
+
+        <section class="card">
+
+            <h2>Measurements</h2>
+
+            <div class="form-grid">
+
+               <div class="input-group">
+    <label for="chestWidth">Chest Width (cm)</label>
+    <input
+        id="chestWidth"
+        type="number"
+        step="any"
+        min="0.1"
+        placeholder="Example: 44.5">
+</div>
+
+<div class="input-group">
+    <label for="jacketLength">Jacket Length (cm)</label>
+    <input
+        id="jacketLength"
+        type="number"
+        step="any"
+        min="0.1"
+        placeholder="Example: 50.5">
+</div>
+
+<div class="input-group">
+    <label for="sleeveLength">Sleeve Length (cm)</label>
+    <input
+        id="sleeveLength"
+        type="number"
+        step="any"
+        min="0.1"
+        placeholder="Example: 48.5">
+</div>
+
+<div class="input-group">
+    <label for="armhole">Armhole (cm)</label>
+    <input
+        id="armhole"
+        type="number"
+        step="any"
+        min="0.1"
+        placeholder="Example: 22.5">
+</div>
+
+<div class="input-group">
+    <label for="neckWidth">Neck Width (cm)</label>
+    <input
+        id="neckWidth"
+        type="number"
+        step="any"
+        min="0.1"
+        placeholder="Example: 18.5">
+</div>
+
+            </div>
+
+        </section>
+
+        <!-- GAUGE -->
+
+        <section class="card">
+
+            <h2>Gauge</h2>
+
+            <div class="form-grid">
+
+                <div class="input-group">
+    <label for="horizontalGauge">17 stitches = ? cm</label>
+    <input
+        id="horizontalGauge"
+        type="number"
+        step="any"
+        placeholder="Example: 5.6">
+</div>
+
+<div class="input-group">
+    <label for="verticalGauge">7 rows = ? cm</label>
+    <input
+        id="verticalGauge"
+        type="number"
+        step="any"
+        placeholder="Example: 8.4">
+    </div>
+    
+</div>
+
+<button id="generateBtn">
+    Generate Pattern
+</button>
+
+</section>
+        <!-- RESULTS -->
+
+       <section class="card">
+
+    <h2>Results</h2>
+
+    <div class="results-grid">
+
+        <!-- Back Panel -->
+        <div class="result-card">
+
+            <h3>Back Panel</h3>
+
+            <div class="result-row">
+                <span>Foundation Chain</span>
+                <strong id="foundationChain">--</strong>
+            </div>
+
+            <div class="result-row">
+                <span>Total Rows</span>
+                <strong id="backRows">--</strong>
+            </div>
+
+        </div>
+
+        <!-- Front Panel -->
+        <div class="result-card">
+
+            <h3>Front Panel</h3>
+
+            <div class="result-row">
+                <span>Foundation Chain</span>
+                <strong id="frontFoundationResult">--</strong>
+            </div>
+
+            <div class="result-row">
+                <span>Normal Rows</span>
+                <strong id="frontNormalRowsResult">--</strong>
+            </div>
+
+            <div class="result-row">
+                <span>Decreased Rows</span>
+                <strong id="frontDecreasedRowsResult">--</strong>
+            </div>
+
+        </div>
+
+        <!-- Sleeve -->
+        <div class="result-card placeholder">
+
+            <h3>Sleeve</h3>
+
+            <p>Coming Soon</p>
+
+        </div>
+
+        <!-- Collar -->
+        <div class="result-card placeholder">
+
+            <h3>Collar</h3>
+
+            <p>Coming Soon</p>
+
+        </div>
+
+    </div>
+
+</section>
+
+    </div>
+
+<script src="moonlit.js"></script>
+
+</body>
+
+</html>
