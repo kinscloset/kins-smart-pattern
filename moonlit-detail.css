@@ -1,0 +1,513 @@
+/* ==========================================
+   ROOT
+========================================== */
+
+:root{
+
+    --paper:#F8F6F2;
+    --ink:#1E2238;
+    --muted:#6D6D73;
+    --line:#DDD8D1;
+    --accent:#4E5E87;
+
+}
+
+/* ==========================================
+   RESET
+========================================== */
+
+*{
+
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+
+}
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+body{
+
+    background:var(--paper);
+
+    color:var(--ink);
+
+    font-family:"Inter",sans-serif;
+
+    line-height:1.8;
+
+}
+
+img{
+
+    display:block;
+
+    width:100%;
+
+}
+
+/* ==========================================
+   CONTAINER
+========================================== */
+
+.container{
+
+    width:min(1180px,90%);
+
+    margin:auto;
+
+}
+
+/* ==========================================
+   BACK BUTTON
+========================================== */
+
+.back-home{
+
+    width:min(1180px,90%);
+
+    margin:40px auto;
+
+}
+
+.back-home a{
+
+    color:var(--muted);
+
+    text-decoration:none;
+
+    transition:.3s;
+
+}
+
+.back-home a:hover{
+
+    color:var(--ink);
+
+}
+
+/* ==========================================
+   HERO
+========================================== */
+
+.hero{
+
+    padding:20px 0 120px;
+
+}
+
+.hero-grid{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:80px;
+
+    align-items:center;
+
+}
+
+.hero-image img{
+
+    border-radius:2px;
+
+}
+
+.hero-content h1{
+
+    font-family:"Cormorant Garamond",serif;
+
+    font-size:4.5rem;
+
+    font-weight:600;
+
+    line-height:1;
+
+    margin-bottom:24px;
+
+}
+
+.hero-quote{
+
+    font-family:"Cormorant Garamond",serif;
+
+    font-size:1.5rem;
+
+    font-style:italic;
+
+    color:var(--muted);
+
+    margin-bottom:50px;
+
+}
+
+.story h2{
+
+    font-family:"Cormorant Garamond",serif;
+
+    font-size:2rem;
+
+    margin-bottom:24px;
+
+}
+
+.story p{
+
+    margin-bottom:24px;
+
+    color:var(--muted);
+
+}
+
+/* ==========================================
+   GALLERY
+========================================== */
+
+.gallery{
+
+    padding:0 0 120px;
+
+}
+
+.gallery h2{
+
+    font-family:"Cormorant Garamond",serif;
+
+    font-size:2.5rem;
+
+    margin-bottom:40px;
+
+}
+
+.gallery-scroll{
+
+    display:flex;
+
+    gap:24px;
+
+    overflow-x:auto;
+
+    scroll-snap-type:x mandatory;
+
+    padding-bottom:10px;
+
+}
+
+.gallery-scroll::-webkit-scrollbar{
+
+    height:8px;
+
+}
+
+.gallery-scroll::-webkit-scrollbar-thumb{
+
+    background:var(--line);
+
+}
+
+.gallery-scroll img{
+
+    width:350px;
+
+    flex:none;
+
+    scroll-snap-align:start;
+
+}
+
+/* ==========================================
+   DETAILS
+========================================== */
+
+.details{
+
+    padding:0 0 120px;
+
+}
+
+.details-grid{
+
+    display:grid;
+
+    grid-template-columns:1fr 2fr;
+
+    gap:80px;
+
+    border-top:1px solid var(--line);
+
+    border-bottom:1px solid var(--line);
+
+    padding:60px 0;
+
+}
+
+.details h2{
+
+    font-family:"Cormorant Garamond",serif;
+
+    font-size:2rem;
+
+    margin-bottom:24px;
+
+}
+
+.details p{
+
+    color:var(--muted);
+
+}
+
+.details ul{
+
+    list-style:none;
+
+}
+
+.details li{
+
+    margin-bottom:16px;
+
+    color:var(--muted);
+
+}
+
+/* ==========================================
+   MADE TO FIT YOU
+========================================== */
+
+.fit{
+
+    padding:0 0 120px;
+
+}
+
+.fit-content{
+
+    max-width:900px;
+
+    margin:auto;
+
+    text-align:center;
+
+}
+
+.eyebrow{
+
+    font-size:.75rem;
+
+    letter-spacing:.25em;
+
+    text-transform:uppercase;
+
+    color:var(--muted);
+
+    margin-bottom:18px;
+
+}
+
+.fit h2{
+
+    font-family:"Cormorant Garamond",serif;
+
+    font-size:3.2rem;
+
+    font-weight:600;
+
+    line-height:1.1;
+
+    margin-bottom:28px;
+
+}
+
+.fit .intro{
+
+    max-width:650px;
+
+    margin:0 auto 18px;
+
+    font-size:1.15rem;
+
+    color:var(--ink);
+
+}
+
+.fit .description{
+
+    max-width:700px;
+
+    margin:0 auto;
+
+    color:var(--muted);
+
+}
+
+.fit-features{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:50px;
+
+    margin-top:70px;
+
+    padding-top:60px;
+
+    border-top:1px solid var(--line);
+
+}
+
+.feature h3{
+
+    font-size:.8rem;
+
+    letter-spacing:.18em;
+
+    text-transform:uppercase;
+
+    margin-bottom:16px;
+
+    color:var(--ink);
+
+}
+
+.feature p{
+
+    color:var(--muted);
+
+}
+
+/* ==========================================
+   PURCHASE
+========================================== */
+
+.purchase{
+
+    padding:0 0 150px;
+
+}
+
+.purchase-content{
+
+    max-width:700px;
+
+    text-align:center;
+
+}
+
+.purchase h2{
+
+    font-family:"Cormorant Garamond",serif;
+
+    font-size:3rem;
+
+    line-height:1.15;
+
+    margin-bottom:24px;
+
+}
+
+.purchase p{
+
+    color:var(--muted);
+
+    margin-bottom:40px;
+
+}
+
+.purchase-button{
+
+    display:inline-block;
+
+    padding:18px 42px;
+
+    border-radius:999px;
+
+    background:var(--ink);
+
+    color:white;
+
+    text-decoration:none;
+
+    transition:.3s;
+
+}
+
+.purchase-button:hover{
+
+    background:var(--accent);
+
+    transform:translateY(-2px);
+
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media(max-width:900px){
+
+    .hero-grid{
+
+        grid-template-columns:1fr;
+
+        gap:50px;
+
+    }
+
+    .hero-content h1{
+
+        font-size:3.5rem;
+
+    }
+
+    .details-grid{
+
+        grid-template-columns:1fr;
+
+        gap:50px;
+
+    }
+    .fit-features{
+
+    grid-template-columns:1fr;
+
+    gap:35px;
+
+}
+    
+
+}
+
+@media(max-width:640px){
+
+    .hero{
+
+        padding:20px 0 80px;
+
+    }
+
+    .hero-content h1{
+
+        font-size:3rem;
+
+    }
+
+    .gallery-scroll img{
+
+        width:260px;
+
+    }
+
+    .purchase h2{
+
+        font-size:2.4rem;
+
+    }
+
+}

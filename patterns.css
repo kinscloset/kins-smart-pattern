@@ -1,0 +1,275 @@
+/* =========================
+   VARIABLES
+========================= */
+
+:root{
+
+    --paper:#F8F6F2;
+    --ink:#1E2238;
+    --muted:#6D6D73;
+    --line:#DDD8D1;
+    --accent:#4E5E87;
+
+}
+
+/* =========================
+   RESET
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    background:var(--paper);
+
+    color:var(--ink);
+
+    font-family:"Inter",sans-serif;
+
+    line-height:1.7;
+
+}
+
+img{
+
+    display:block;
+
+    width:100%;
+
+}
+
+/* =========================
+   CONTAINER
+========================= */
+
+.container{
+
+    width:min(1180px,90%);
+    margin:auto;
+
+}
+
+/* =========================
+   BACK LINK
+========================= */
+
+.back-home{
+
+    width:min(1180px,90%);
+    margin:48px auto 0;
+
+}
+
+.back-home a{
+
+    text-decoration:none;
+
+    color:var(--muted);
+
+    font-size:.95rem;
+
+    transition:.3s;
+
+}
+
+.back-home a:hover{
+
+    color:var(--ink);
+
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.patterns{
+
+    padding:60px 0 120px;
+
+}
+
+.eyebrow{
+
+    text-transform:uppercase;
+
+    letter-spacing:4px;
+
+    font-size:.75rem;
+
+    color:var(--muted);
+
+    margin-bottom:18px;
+
+}
+
+.patterns h1{
+
+    font-family:"Cormorant Garamond",serif;
+
+    font-size:4.2rem;
+
+    font-weight:600;
+
+    line-height:1.05;
+
+    margin-bottom:24px;
+
+}
+
+.section-intro{
+
+    max-width:620px;
+
+    color:var(--muted);
+
+    font-size:1.05rem;
+
+    margin-bottom:90px;
+
+}
+
+/* =========================
+   GRID
+========================= */
+
+.pattern-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:54px;
+
+}
+
+/* =========================
+   CARD
+========================= */
+
+.pattern-card{
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+.pattern-card img{
+
+    aspect-ratio:3/4;
+
+    object-fit:cover;
+
+    margin-bottom:28px;
+
+    transition:.5s ease;
+
+}
+
+.pattern-card h2{
+
+    font-family:"Cormorant Garamond",serif;
+
+    font-size:2rem;
+
+    font-weight:600;
+
+    margin-bottom:14px;
+
+}
+
+.description{
+
+    color:var(--muted);
+
+    margin-bottom:18px;
+
+}
+
+.availability{
+
+    font-size:.9rem;
+
+    color:var(--accent);
+
+    margin-bottom:28px;
+
+}
+
+.pattern-link{
+
+    text-decoration:none;
+
+    color:var(--ink);
+
+    font-weight:500;
+
+    width:max-content;
+
+    transition:.3s;
+
+}
+
+.pattern-link:hover{
+
+    transform:translateX(8px);
+
+}
+
+/* =========================
+   HOVER
+========================= */
+
+.pattern-card{
+
+    overflow:hidden;
+
+}
+
+.pattern-card:hover img{
+
+    transform:scale(1.03);
+
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width:980px){
+
+    .pattern-grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+}
+
+@media (max-width:640px){
+
+    .patterns{
+
+        padding:40px 0 80px;
+
+    }
+
+    .patterns h1{
+
+        font-size:3rem;
+
+    }
+
+    .pattern-grid{
+
+        grid-template-columns:1fr;
+
+        gap:60px;
+
+    }
+
+}

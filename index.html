@@ -2,188 +2,134 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Kin's Smart Pattern</title>
 
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
+
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="style.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="landing.css">
+
 </head>
 
 <body>
 
-    <div class="container">
-
-        <!-- HERO -->
-
-        <!-- HERO -->
-
 <section class="hero">
 
-    <p class="eyebrow">
-        KIN'S SMART PATTERN
-    </p>
+    <div class="hero-text">
 
-    <h1>
-        Moonlit Pages
-    </h1>
+        <img
+            src="assets/branding/logo.png"
+            class="hero-logo"
+            alt="Kin's Smart Pattern">
 
-    <p class="hero-description">
-        Some stories are not written in daylight. They appear quietly,
-        somewhere between midnight thoughts and unfinished dreams.
-    </p>
+        <p class="eyebrow">
+            WEARABLE CROCHET PATTERNS
+        </p>
 
-    <p class="hero-story">
-        Moonlit Pages is an ode to those quiet hours—when we write our
-        truest stories, even if no one else ever reads them.
-    </p>
+        <h1>
+            Designed for the wardrobe
+            you'll actually wear.
+        </h1>
 
-</section>
+        <p class="intro">
+            Hi, I'm Kin.
 
-        <!-- MEASUREMENT GUIDE -->
+            I design crochet garments inspired by the clothes I always wanted in my own closet.
 
-        <section class="card">
+            This is where I share my patterns, behind the scenes, and everything I'm currently working on.
+        </p>
 
-    <h2>Measurement Guide</h2>
+      <div class="hero-buttons">
 
-    <p class="section-description">
-        Use a cardigan or jacket that already fits the way you like.
-        Measure the garment instead of measuring your body.
-    </p>
+    <a href="patterns.html" class="button primary">
+        Explore Patterns
+    </a>
 
-    <img
-        src="assets/measurement-guide.png"
-        alt="Measurement Guide"
-        class="guide-image">
+    <a href="https://forms.gle/bxfouJAornVrJ94x5"
+   class="button secondary"
+   target="_blank"
+   rel="noopener noreferrer">
+    Become a Tester
+</a>
 
-</section>
+    <div class="hero-social">
 
-        <!-- MEASUREMENTS -->
+    <span>Follow the Journal on</span>
 
-        <section class="card">
+    <a href="https://instagram.com/kingkinfortuna" target="_blank">
+        Instagram ↗
+    </a>
 
-            <h2>Measurements</h2>
-
-            <div class="form-grid">
-
-               <div class="input-group">
-    <label for="chestWidth">Chest Width (cm)</label>
-    <input
-        id="chestWidth"
-        type="number"
-        step="any"
-        min="0.1"
-        placeholder="Example: 44.5">
 </div>
 
-<div class="input-group">
-    <label for="jacketLength">Jacket Length (cm)</label>
-    <input
-        id="jacketLength"
-        type="number"
-        step="any"
-        min="0.1"
-        placeholder="Example: 50.5">
-</div>
-
-<div class="input-group">
-    <label for="sleeveLength">Sleeve Length (cm)</label>
-    <input
-        id="sleeveLength"
-        type="number"
-        step="any"
-        min="0.1"
-        placeholder="Example: 48.5">
-</div>
-
-<div class="input-group">
-    <label for="armhole">Armhole (cm)</label>
-    <input
-        id="armhole"
-        type="number"
-        step="any"
-        min="0.1"
-        placeholder="Example: 22.5">
-</div>
-
-<div class="input-group">
-    <label for="neckWidth">Neck Width (cm)</label>
-    <input
-        id="neckWidth"
-        type="number"
-        step="any"
-        min="0.1"
-        placeholder="Example: 18.5">
-</div>
-
-            </div>
-
-        </section>
-
-        <!-- GAUGE -->
-
-        <section class="card">
-
-            <h2>Gauge</h2>
-
-            <div class="form-grid">
-
-                <div class="input-group">
-    <label for="horizontalGauge">17 stitches = ? cm</label>
-    <input
-        id="horizontalGauge"
-        type="number"
-        step="any"
-        placeholder="Example: 5.6">
-</div>
-
-<div class="input-group">
-    <label for="verticalGauge">7 rows = ? cm</label>
-    <input
-        id="verticalGauge"
-        type="number"
-        step="any"
-        placeholder="Example: 8.4">
-</div>
-
-            <button id="generateBtn">
-                Generate Pattern
-            </button>
-
-        </section>
-
-        <!-- RESULTS -->
-
-        <section class="card">
-
-            <h2>Results</h2>
-
-            <div class="result-card">
-
-                <h3>Back Panel</h3>
-
-                <div class="result-row">
-                    <span>Foundation Chain</span>
-                    <strong id="foundationChain">--</strong>
-                </div>
-
-                <div class="result-row">
-                    <span>Total Rows</span>
-                    <strong id="backRows">--</strong>
-                </div>
-
-            </div>
-
-        </section>
+        </div>
 
     </div>
 
-    <script src="script.js"></script>
+    <div class="hero-image">
+
+        <img
+            src="assets/branding/kin.jpg"
+            alt="Kin"
+            class="hero-photo">
+
+    </div>
+
+</section>
+
+<!-- ==========================================
+     WHY MY PATTERNS
+========================================== -->
+
+<section class="why">
+
+    <div class="container why-content">
+
+        <p class="eyebrow">
+
+            WHY MY PATTERNS?
+
+        </p>
+
+        <h2>
+
+            Made to fit you.
+
+        </h2>
+
+        <p class="intro">
+
+            I wanted crochet patterns that felt a little more personal.
+
+        </p>
+
+        <p class="description">
+
+            Every pattern comes with access to my Smart Pattern Calculator,
+            so instead of adjusting yourself to the pattern,
+            the pattern adjusts to you.
+
+        </p>
+
+    </div>
+
+</section>
+
+<!-- ==========================================
+     FEATURED DESIGNS
+========================================== -->
+
+<!-- nanti section Featured Designs di sini -->
 
 </body>
 
