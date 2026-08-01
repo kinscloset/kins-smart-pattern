@@ -79,32 +79,82 @@ const rowGauge = 7 / verticalCm;
     // Round UP to nearest even number
     totalRows = Math.ceil(totalRows / 2) * 2;
 
-    // ==============================
-    // FRONT PANEL
-    // ==============================
+   // ==============================
+// FRONT PANEL
+// ==============================
 
-    // Foundation Chain
-    let frontFoundation =
+// Foundation Chain
+let frontFoundation =
     ((chestWidth / 2) - 3) * stitchGauge;
 
-    frontFoundation = Math.ceil(frontFoundation);
-    frontFoundation = Math.ceil(frontFoundation / 4) * 4;
-    frontFoundation += 3;
+frontFoundation = Math.ceil(frontFoundation);
+frontFoundation = Math.ceil(frontFoundation / 4) * 4;
+frontFoundation += 3;
 
-// Total Decreased Rows
+// Neck Width
+let frontNeckWidth =
+    neckWidth * stitchGauge;
+
+// Round UP to whole stitch
+frontNeckWidth = Math.ceil(frontNeckWidth);
+
+// ==============================
+// Decreased Rows
+// ==============================
+
 let frontDecreasedRows =
     armhole * rowGauge;
 
-// Round UP to nearest odd number
+// Round UP ke ganjil
 frontDecreasedRows = Math.ceil(frontDecreasedRows);
 
 if (frontDecreasedRows % 2 === 0) {
     frontDecreasedRows++;
 }
 
-// Total Normal Rows
+// Safety check
+if (frontDecreasedRows >= totalRows) {
+    frontDecreasedRows = totalRows - 1;
+}
+
+// Tetap harus ganjil
+if (frontDecreasedRows % 2 === 0) {
+    frontDecreasedRows--;
+}
+
+// ==============================
+// Normal Rows
+// ==============================
+
 let frontNormalRows =
     totalRows - frontDecreasedRows;
+
+// Karena totalRows selalu genap,
+// normalRows otomatis ganjil jika
+// decreasedRows ganjil.
+
+// Safety
+if (frontNormalRows < 1) {
+    frontNormalRows = 1;
+    frontDecreasedRows = totalRows - 1;
+}
+
+// ==============================
+// COLLAR
+// ==============================
+
+// Side Hem
+let sideHem = 3 * rowGauge;
+
+// Round UP to nearest even number
+sideHem = Math.ceil(sideHem / 2) * 2;
+
+// Collar Width
+let collarWidth =
+    ((chestWidth / 2) - 3) * rowGauge;
+
+// Round UP to nearest even number
+collarWidth = Math.ceil(collarWidth / 2) * 2;
 
     // ==============================
     // DISPLAY RESULT
@@ -124,4 +174,14 @@ let frontNormalRows =
 
     document.getElementById("frontDecreasedRowsResult").textContent =
     frontDecreasedRows + " rows";
+
+    document.getElementById("sideHemResult").textContent =
+    sideHem + " rows";
+
+    document.getElementById("collarWidthResult").textContent =
+    collarWidth + " rows";
+
+    document.getElementById("frontNeckWidthResult").textContent =
+    frontNeckWidth + " sts";
+
 }
