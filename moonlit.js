@@ -148,7 +148,7 @@ sideHem = Math.ceil(sideHem / 2) * 2;
 
 // Collar Width
 let collarWidth =
-    ((chestWidth / 2) - 3) * rowGauge;
+    (chestWidth / 2) * rowGauge;
 
 // Round UP to nearest even number
 collarWidth = Math.ceil(collarWidth / 2) * 2;
