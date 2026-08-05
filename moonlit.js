@@ -156,6 +156,21 @@ let collarWidth =
 // Round UP to nearest even number
 collarWidth = Math.ceil(collarWidth / 2) * 2;
 
+// ==============================
+// SLEEVE
+// ==============================
+
+// Sleeve Rows
+let sleeveRows =
+    (sleeveLength - 3) * rowGauge;
+
+// Round UP ke angka ganjil
+sleeveRows = Math.ceil(sleeveRows);
+
+if (sleeveRows % 2 === 0) {
+    sleeveRows++;
+}
+
     // ==============================
     // DISPLAY RESULT
     // ==============================
@@ -183,5 +198,8 @@ collarWidth = Math.ceil(collarWidth / 2) * 2;
 
     document.getElementById("frontNeckWidthResult").textContent =
     frontNeckWidth + " sts";
+    
+    document.getElementById("sleeveRowsResult").textContent =
+    sleeveRows + " rows";
 
 }
