@@ -16,8 +16,7 @@ function calculatePattern() {
     const jacketLength = Number(document.getElementById("jacketLength").value);
     const sleeveLength = Number(document.getElementById("sleeveLength").value);
     const armhole = Number(document.getElementById("armhole").value);
-    const neckWidth = Number(document.getElementById("neckWidth").value);
-
+    
     const horizontalCm = Number(document.getElementById("horizontalGauge").value);
     const verticalCm = Number(document.getElementById("verticalGauge").value);
 
@@ -31,7 +30,6 @@ function calculatePattern() {
     isNaN(jacketLength) ||
     isNaN(sleeveLength) ||
     isNaN(armhole) ||
-    isNaN(neckWidth) ||
     isNaN(horizontalCm) ||
     isNaN(verticalCm) ||
 
@@ -39,7 +37,6 @@ function calculatePattern() {
     jacketLength <= 0 ||
     sleeveLength <= 0 ||
     armhole <= 0 ||
-    neckWidth <= 0 ||
     horizontalCm <= 0 ||
     verticalCm <= 0
 
@@ -198,7 +195,7 @@ if (sleeveRows % 2 === 0) {
 
     document.getElementById("frontNeckWidthResult").textContent =
     frontNeckWidth + " sts";
-    
+
     document.getElementById("sleeveRowsResult").textContent =
     sleeveRows + " rows";
 
