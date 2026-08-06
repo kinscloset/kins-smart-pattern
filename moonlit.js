@@ -88,13 +88,6 @@ frontFoundation = Math.ceil(frontFoundation);
 frontFoundation = Math.ceil(frontFoundation / 4) * 4;
 frontFoundation += 3;
 
-// Neck Width
-let frontNeckWidth =
-    neckWidth * stitchGauge;
-
-// Round UP to whole stitch
-frontNeckWidth = Math.ceil(frontNeckWidth);
-
 // ==============================
 // Decreased Rows
 // ==============================
@@ -192,9 +185,6 @@ if (sleeveRows % 2 === 0) {
 
     document.getElementById("collarWidthResult").textContent =
     collarWidth + " rows";
-
-    document.getElementById("frontNeckWidthResult").textContent =
-    frontNeckWidth + " sts";
 
     document.getElementById("sleeveRowsResult").textContent =
     sleeveRows + " rows";
